@@ -31,9 +31,9 @@ public class MyMain {
     public static String removeNumbers(String str) {
         int length = str.length();
         String newstr = "";
-        for (int i = length; i<=length; i++){
-            char ch = (char)(i);
-            if (ch> 0 && ch < 9){
+        for (int i = 0; i<length; i++){
+            char ch = str.charAt(i);
+            if (ch>='0' && ch <= '9'){
                 continue;
             }
             else{
@@ -62,5 +62,7 @@ public class MyMain {
         System.out.println();
         System.out.println("removeNumbers Tests:");
         System.out.println(removeNumbers("asdf12233"));
+        System.out.println(removeNumbers("!@#*#$*(1324908"));
+        System.out.println(removeNumbers("|}}{}|}3848:><>"));
     }
 }
