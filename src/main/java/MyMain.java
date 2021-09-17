@@ -30,11 +30,17 @@ public class MyMain {
     // from the original String.
     public static String removeNumbers(String str) {
         int length = str.length();
+        String newstr = "";
         for (int i = length; i<=length; i++){
             char ch = (char)(i);
-            if(ch == )
+            if (ch> 0 && ch < 9){
+                continue;
+            }
+            else{
+                newstr = newstr+ch;
+            }
         }
-        return "!!!";
+        return newstr;
     }
 
     // Write some code to test your methods!
@@ -52,5 +58,9 @@ public class MyMain {
         System.out.println(toUpper('Z')); // 'Z'
         System.out.println(toUpper('a')); // 'A'
         System.out.println(toUpper('z')); // 'Z'
+
+        System.out.println();
+        System.out.println("removeNumbers Tests:");
+        System.out.println(removeNumbers("asdf12233"));
     }
 }
